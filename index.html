@@ -21,9 +21,12 @@
       </div>
       <div>
         <h1 v-if="inventory>10">Lot of Stock</h1>
-        <h1 v-else-if="inventory<10 && inventory>0">Limited Stock</h1>
-        <h1 v-else="inventory=0">Out of Stock</h1>
+        <h1 v-else-if="inventory<=10 && inventory>0">Limited Stock</h1>
+        <h1 v-else="inventory">Out of Stock</h1>
       </div>
+      <ul>
+        <li v-for="size in sizes">{{size}}</li>
+      </ul>
     </div>
     <script src="main.js"></script>
 

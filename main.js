@@ -5,7 +5,8 @@ const app=Vue.createApp({
             url:'https://web.whatsapp.com/',
             image:'./assets/dp.jpg',
             onSale:true,
-            inventory:'0'
+            inventory:'10',
+            sizes:['green','red']
             
         }
     }
