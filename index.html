@@ -13,9 +13,12 @@
     <div id="app">
       <p>{{ description }}</p>
       <a v-bind:href="url">Click Me!</a>
-      <img v-bind:src="image" alt="" />
+      <div>
+        <img v-bind:src="image" alt="" />
+      </div>
     </div>
     <script src="main.js"></script>
+
     <script>
       const mountedApp = app.mount("#app");
     </script>
