@@ -7,15 +7,19 @@ const app=Vue.createApp({
             onSale:true,
             inventory:'10',
             sizes:['green','red'],
-            cart:0
+            cart:0,
+            inStock:false,
+            styles:{
+                
+                fontSize:'14px'
+            }
         }
         
     },
     methods: {
             addToCart(){
                 this.cart+=1
-                
-            },
+           },
             deleteFromCart(){
                 this.cart-=1
             }
