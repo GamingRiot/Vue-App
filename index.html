@@ -16,6 +16,14 @@
       <div>
         <img v-bind:src="image" alt="" />
       </div>
+      <div>
+        <h1 v-if="onSale">On Sale</h1>
+      </div>
+      <div>
+        <h1 v-if="inventory>10">Lot of Stock</h1>
+        <h1 v-else-if="inventory<10 && inventory>0">Limited Stock</h1>
+        <h1 v-else="inventory=0">Out of Stock</h1>
+      </div>
     </div>
     <script src="main.js"></script>
 
