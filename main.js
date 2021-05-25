@@ -6,8 +6,18 @@ const app=Vue.createApp({
             image:'./assets/dp.jpg',
             onSale:true,
             inventory:'10',
-            sizes:['green','red']
-            
+            sizes:['green','red'],
+            cart:0
         }
-    }
+        
+    },
+    methods: {
+            addToCart(){
+                this.cart+=1
+                
+            },
+            deleteFromCart(){
+                this.cart-=1
+            }
+        }
 })

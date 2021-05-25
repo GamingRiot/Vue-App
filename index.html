@@ -27,6 +27,11 @@
       <ul>
         <li v-for="size in sizes">{{size}}</li>
       </ul>
+      <div>
+        <p>Cart[{{cart}}]</p>
+        <button v-on:click="addToCart">Add To Cart</button>
+        <button v-on:click="deleteFromCart">Delete From Cart</button>
+      </div>
     </div>
     <script src="main.js"></script>
 
