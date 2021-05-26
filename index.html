@@ -17,7 +17,7 @@
         <img v-bind:src="image" alt="" />
       </div>
       <div>
-        <h1 v-if="onSale">On Sale</h1>
+        <h1 v-if="onSale">{{title}} is On sale</h1>
       </div>
       <div>
         <h1 v-if="inventory>10">Lot of Stock</h1>
@@ -27,7 +27,7 @@
       <ul>
         <li v-for="size in sizes">{{size}}</li>
       </ul>
-      <div :style="{backgroundColor:'red'}" :class="{}">
+      <div>
         <p>Cart[{{cart}}]</p>
         <button v-on:click="addToCart" :disabled="!inStock">Add To Cart</button>
       </div>

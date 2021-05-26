@@ -3,6 +3,8 @@ const app=Vue.createApp({
         return {
             description:'hello guys i am tushar arora and this is my first vue',
             url:'https://web.whatsapp.com/',
+            brand:'vivo',
+            product:'m31',
             image:'./assets/dp.jpg',
             onSale:true,
             inventory:'10',
@@ -22,6 +24,11 @@ const app=Vue.createApp({
            },
             deleteFromCart(){
                 this.cart-=1
+            }
+        },
+        computed:{
+            title(){
+                return this.brand+' '+this.product
             }
         }
 })
