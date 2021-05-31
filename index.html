@@ -11,29 +11,10 @@
   </head>
   <body>
     <div id="app">
-      <p>{{ description }}</p>
-      <a v-bind:href="url">Click Me!</a>
-      <div>
-        <img v-bind:src="image" alt="" />
-      </div>
-      <div>
-        <h1 v-if="onSale">{{title}} is On sale</h1>
-      </div>
-      <div>
-        <h1 v-if="inventory>10">Lot of Stock</h1>
-        <h1 v-else-if="inventory<=10 && inventory>0">Limited Stock</h1>
-        <h1 v-else="inventory">Out of Stock</h1>
-      </div>
-      <ul>
-        <li v-for="size in sizes">{{size}}</li>
-      </ul>
-      <div>
-        <p>Cart[{{cart}}]</p>
-        <button v-on:click="addToCart" :disabled="!inStock">Add To Cart</button>
-      </div>
+      <product-details :onSale="onSale"></product-details>
     </div>
     <script src="main.js"></script>
-
+    <script src="components/ProductDetails.JS"></script>
     <script>
       const mountedApp = app.mount("#app");
     </script>
