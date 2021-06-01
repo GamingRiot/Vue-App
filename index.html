@@ -11,10 +11,15 @@
   </head>
   <body>
     <div id="app">
-      <product-details :onSale="onSale"></product-details>
+      <div>
+        <h2>Would You recommend this product?</h2>
+
+        <label for="review">Yes/No</label>
+        <input type="text" id="review" />
+        <input type="submit" id="submit />
+      </div>
     </div>
     <script src="main.js"></script>
-    <script src="components/ProductDetails.JS"></script>
     <script>
       const mountedApp = app.mount("#app");
     </script>
